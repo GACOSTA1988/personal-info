@@ -28,6 +28,16 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 100000, // Convert images < 8kb to base64 strings
+            name: 'img/[hash]-[name].[ext]'
+          }
+        }]
+      },
+      {
         test: /\.css$/,
         use: [
           'style-loader',
@@ -37,9 +47,9 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: [
-            /node_modules/,
-            /spec/
-          ],
+          /node_modules/,
+          /spec/
+        ],
         loader: "eslint-loader"
       }
     ]

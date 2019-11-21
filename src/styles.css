@@ -1,12 +1,19 @@
 body {
-  /* background-image: url(./bearBite.jpg); */
-  margin: 25px;
+  background-image: url(./CIA-pic.png);
+  margin: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+text-align: center;
+
 }
 
-.feed, .poke, .sleep {
-  display: none;
-}
+.card-header{
+  background-color: black;
+  color: white;
+  padding: 12px;
+  border-radius: 5px 50px;
+};
 
-.warning {
+/* .warning {
   color: #ff7919;
-}
+} */
